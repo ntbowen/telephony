@@ -1,0 +1,25 @@
+--- a/kernel-module/xt_RTPENGINE.c
++++ b/kernel-module/xt_RTPENGINE.c
+@@ -3961,6 +3961,7 @@ static int send_proxy_packet4(struct sk_buff *skb, struct re_address *src, struct re_address *dst,
+ 		unsigned char tos, const struct xt_action_param *par)
+ {
+ 	struct iphdr *ih;
++	struct flowi4 fl4;
+ 	struct udphdr *uh;
+ 	unsigned int datalen;
+ 	struct net *net;
+@@ -3997,7 +3998,13 @@ static int send_proxy_packet4(struct sk_buff *skb, struct re_address *src, struct re_address *dst,
+ 	if (!net)
+ 		goto drop;
+ 
+-	rt = ip_route_output(net, dst->u.ipv4, src->u.ipv4, tos, 0);
++	/* 使用 flowi4 结构体和 ip_route_output_key 替代 ip_route_output */
++	memset(&fl4, 0, sizeof(fl4));
++	fl4.daddr = dst->u.ipv4;
++	fl4.saddr = src->u.ipv4;
++	fl4.flowi4_tos = tos;
++	fl4.flowi4_oif = 0;  /* 对应原来的最后一个参数 */
++	rt = ip_route_output_key(net, &fl4);
+ 	if (IS_ERR(rt))
+ 		goto drop;
+ 	skb_dst_drop(skb);
