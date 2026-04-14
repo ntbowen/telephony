@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk
 
 PKG_NAME:=rtpengine
-PKG_VERSION:=11.5.1.49
+PKG_VERSION:=14.1.1.5
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-mr$(PKG_VERSION).tar.gz

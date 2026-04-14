@@ -9,12 +9,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kamailio
-PKG_VERSION:=6.0.1
+PKG_VERSION:=6.1.1
 PKG_RELEASE:=2
 
 PKG_SOURCE_URL:=https://github.com/kamailio/kamailio/archive/refs/tags/
 PKG_SOURCE:=$(PKG_VERSION).tar.gz
-PKG_HASH:=3d7a91fd52d04f09d814fd34eda6443c559adace4248eb6ae71c949e3e3f9f29
+PKG_HASH:=5e8fb2b3600878e8c96602434eecd14be53ff06d91bf8e878b0747577a3e8591
 PKG_BUILD_FLAGS:=no-mips16
 
 PKG_LICENSE:=GPL-2.0+

@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libks
 
-PKG_VERSION:=2.0.6
+PKG_VERSION:=2.0.10
 PKG_RELEASE:=1
 
 PKG_SOURCE:=libks-$(PKG_VERSION).tar.gz

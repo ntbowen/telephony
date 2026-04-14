@@ -10,7 +10,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=pjproject
-PKG_VERSION:=2.15.1
+PKG_VERSION:=2.16
 PKG_RELEASE:=1
 PKG_CPE_ID:=cpe:/a:pjsip:pjsip
 
