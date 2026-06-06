@@ -6,13 +6,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=freeswitch
-PKG_VERSION:=1.11.0
+PKG_VERSION:=1.11.1
 PKG_RELEASE:=3
 PKG_MAINTAINER:=
 
 PKG_SOURCE:=freeswitch-$(PKG_VERSION).-release.tar.xz
 PKG_SOURCE_URL:=https://files.freeswitch.org/releases/freeswitch
-PKG_HASH:=599bab2ebf46b494d9b0b36a9acb1d84be70649cda73716f6d14b0f686659a94
+PKG_HASH:=ed4e6ecc6a6ee0bcbc068f33cf3e5d1b83d7ad26c3a98feaebb1b2ab22d5adf4
 
 PKG_CPE_ID:=cpe:/a:freeswitch:freeswitch
 
