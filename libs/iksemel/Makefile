@@ -11,9 +11,10 @@ PKG_NAME:=iksemel
 PKG_VERSION:=1.5
 PKG_RELEASE:=2
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/iksemel
-PKG_HASH:=458c1b8fb3349076a6cecf26c29db1d561315d84e16bfcfba419f327f502e244
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/meduketto/iksemel
+PKG_SOURCE_VERSION:=03c0e84674d85a66c0bf945bda37df5b69df04d9
+PKG_MIRROR_HASH:=skip
 
 PKG_FIXUP:=autoreconf
 
