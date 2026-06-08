@@ -11,7 +11,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_VERSION:=$(PKG_VERSION)
-PKG_SOURCE_URL:=https://github.com/coturn/coturn
+PKG_SOURCE_URL:=https://codeload.github.com/coturn/coturn/tar.gz/$(PKG_VERSION)?
 PKG_MIRROR_HASH:=955aad1a7c72638482899640206a39b790e7406ce6c7057b3e89aacadbe70c18
 
 PKG_MAINTAINER:=Jiri Slachta <jiri@slachta.eu>
