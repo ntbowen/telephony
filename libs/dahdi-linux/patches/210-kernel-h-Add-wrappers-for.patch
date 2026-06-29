@@ -23,7 +23,7 @@
 +/* DAHDI expects hrtimer_init(), but kernels >= 6.8 removed it.
 + * Recreate it using the modern hrtimer_setup() API.
 + */
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 8, 0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 17, 0)
 +static inline void hrtimer_init(struct hrtimer *timer,
 +                                clockid_t clock_id,
 +                                enum hrtimer_mode mode)
