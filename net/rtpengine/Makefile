@@ -209,13 +209,14 @@ define KernelPackage/ipt-rtpengine
 $(call Package/rtpengine/Default)
   TITLE:=Sipwise rtpengine netfilter module
   SUBMENU:=Netfilter Extensions
-  FILES:=$(PKG_BUILD_DIR)/kernel-module/xt_RTPENGINE.$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoProbe,xt_RTPENGINE)
+  FILES:=$(PKG_BUILD_DIR)/kernel-module/nft_rtpengine.$(LINUX_KMOD_SUFFIX)
+  AUTOLOAD:=$(call AutoProbe,nft_rtpengine)
   DEPENDS := \
 	  +PACKAGE_kmod-ipt-rtpengine:kmod-crypto-aead \
 	  +PACKAGE_kmod-ipt-rtpengine:kmod-crypto-hash \
+	  +PACKAGE_kmod-ipt-rtpengine:kmod-nft-core \
 	  +PACKAGE_kmod-ipt-rtpengine:kmod-ipt-core
-  MODPARAMS.xt_RTPENGINE := \
+  MODPARAMS.nft_rtpengine := \
 	  proc_uid=$(RTPENGINE_USERID) \
 	  proc_gid=$(RTPENGINE_GROUPID)
   USERID:=$(RTPENGINE_USER)
